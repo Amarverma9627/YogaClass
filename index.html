@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
@@ -18,14 +19,23 @@
             <img src="assets/logo.png" alt="">
             <p>YOGA<span>CLASS </span></p>
         </div>
-        <ul class="nav_links">
-            <li class="link"><a href="#home">Home</a></li>
-            <li class="link"><a href="#classes">Classes</a></li>
-            <li class="link"><a href="#membership">Membership</a></li>
-            <li class="link"><a href="#about">About</a></li>
-            <li class="link"><a href="#posts">Blog</a></li>
-            <li class="link"><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="show" id="menu"></div>
+            <div class="fa fa-bars" aria-hidden="true" id="menu-icon" onclick="show()"></div>
+        </div>
+        <div class="hide" id="cancel">
+            <i class="fa fa-times " aria-hidden="true" onclick="hide() " id="cross"></i>
+        </div>
+        <div class="hide" id="opt">
+            <ul class="nav_links">
+                <li class="link"><a href="#home">Home</a></li>
+                <li class="link"><a href="#classes">Classes</a></li>
+                <li class="link"><a href="#membership">Membership</a></li>
+                <li class="link"><a href="#about">About</a></li>
+                <li class="link"><a href="#posts">Blog</a></li>
+                <li class="link"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        
     </nav>
 
     <!-- HOME-SECTION-CODE -->
@@ -175,11 +185,11 @@
     </section>
     <!-- membership sectioon code -->
     <section class="membership" id="membership">
-        <div class="section_container membership_container">
+        <div class="section_container membership_container" data-aos="zoom-in">
             <p class="section_subheader">PRICING TABLE</p>
             <h2 class="section_header">Membership Cards</h2>
         </div>
-        <div class="membership_grid">
+        <div class="membership_grid" data-aos="zoom-in">
             <div class="membership_card">
                 <h4>YEAR CARD</h4>
                 <h2><sup>$</sup>499</h2>
@@ -218,11 +228,11 @@
 
     <!-- About section code -->
     <section class="about" id="about">
-        <div class="about-container">
+        <div class="about-container" data-aos="zoom-in">
             <p class="section_subheader">TESTYMONY</p>
             <h2 class="section_header heading">Succesful Stories</h2>
         </div>
-        <div class="about-grid">
+        <div class="about-grid" data-aos="zoom-in">
             <div class="about-item">
                 <p>This yoga website has been a game-changer for me. The variety of classes and guided sessions have not
                     only improved my flexibility but also brought a sense of calm to my hectic days.</p>
@@ -255,21 +265,152 @@
                 </div>
             </div>
             <div class="about-stories">
-                <!-- <img src="assets/stories-3.jpg" alt=""> -->
+                <img src="assets/stories-3.jpg" alt="">
                 <div>
                     <h1>Sophia Smith</h1>
                     <h3>Member</h3>
                 </div>
             </div>
         </div>
-        <div class="classes_banner">
-            <img src="assets/46-banner.png" alt="banner">
+
+    </section>
+
+    <!-- classic banner  section code -->
+    <section class="banner">
+        <div class="section_container banner_container" data-aos="zoom-in">
+            <div class="banner-card">
+                <h4>5000</h4>
+                <p>Happy Customers</p>
+            </div>
+            <div class="banner-card">
+                <h4>4560</h4>
+                <p>Yoga Workshop</p>
+            </div>
+            <div class="banner-card">
+                <h4>590</h4>
+                <p>Year of Experience </p>
+            </div>
+            <div class="banner-card">
+                <h4>900</h4>
+                <p>Lesson Conducted</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- posts section code -->
+    <section class="posts" id="posts">
+        <div class="posts_container" data-aos="zoom-in">
+            <p class="section_subheader">Blog</p>
+            <h2 class="section_header">Recent Post</h2>
+            <div class="posts_grid" data-aos="zoom-in">
+
+                <div class="posts_card">
+                    <img src="assets/posts-1.jpg" alt="posts-1">
+                    <div class="posts_content">
+                        <div class="posts_date">
+                            <span>31</span>
+                            <div>
+                                <p>2022</p>
+                                <p>December</p>
+                            </div>
+                        </div>
+
+                        <h4>Unlocking Inner Peace</h4>
+                        <p>
+                            Dive into tha practices that help you cultivate inner peace , reduce stress and enhance your
+                            overall well-being
+                        </p>
+                    </div>
+                </div>
+
+                <div class="posts_card">
+                    <img src="assets/posts-2.jpg" alt="posts-1">
+                    <div class="posts_content">
+                        <div class="posts_date">
+                            <span>25</span>
+                            <div>
+                                <p>2023</p>
+                                <p>December</p>
+                            </div>
+                        </div>
+
+                        <h4>From desk to mat</h4>
+                        <p>
+                            Dive into tha practices that help you cultivate inner peace , reduce stress and enhance your
+                            overall well-being
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="posts_card">
+                    <img src="assets/posts-3.jpg" alt="posts-1">
+                    <div class="posts_content">
+                        <div class="posts_date">
+                            <span>08</span>
+                            <div>
+                                <p>2024</p>
+                                <p>December</p>
+                            </div>
+                        </div>
+
+                        <h4>Yoga Through the Ages</h4>
+                        <p>
+                            From prenatal yoga to gentle senior yoga ,discover enhance flexibility and faster a lifelong
+                            love
+                            for well being.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- photo section code -->
+    <section class="section_container photo_container">
+        <p class="section_subheader">GALLERY</p>
+        <h2 class="section_header">See The Latest Photos</h2>
+        <div class="photos_grid" data-aos="zoom-in">
+            <div class="photos_card">
+                <img src="assets/photos-1.jpg" alt="" sizes="" srcset="">
+            </div>
+            <div class="photos_card">
+                <img src="assets/photos-2.jpg" alt="" sizes="" srcset="">
+            </div>
+            <div class="photos_card">
+                <img src="assets/photos-3.jpg" alt="" sizes="" srcset="">
+            </div>
+            <div class="photos_card">
+                <img src="assets/photos-4.jpg" alt="" sizes="" srcset="">
+            </div>
         </div>
     </section>
 
-     <!-- Blog section code -->
+    <!-- footer section code -->
+    <footer class="footer" id="contact">
+        <div class="footer_container">
+            <div class="footer_col">
+                <div class="footer_logo"><a href="#">YogaClass</a></div>
+            </div>
+            <div class="footer_col">
+                <p>203 Lal Streets Mountain View ,San Francisco ,California USA</p>
+            </div>
+            <div class="footer_col">
+                <div class="footer_socials">
+                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer_bar">
+            Copyright◎ 2024 web Design Coder Amar .All Reserved
+        </div>
+    </footer>
 
 
+    <script src="yoga.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
