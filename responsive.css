@@ -277,14 +277,14 @@
         font-size: 5rem;
         font-weight: 300;
         color: var(--text-dark);
-        width: 80rem;
+        width: 40rem;
     }
     .header_content h2 {
         margin-bottom: 2rem;
         font-size: 4rem;
         font-weight: 300;
         color: var(--text-light);
-        width: 80rem;
+        width: 60rem;
     }
     .header_content .btn {
         background: transparent;
@@ -360,9 +360,9 @@
 }
 
 @media(max-width:450px) {
-
+    
     .nav_logo img {
-       width: 50rem;
+       width: 10rem;
     }
   
     .header_container {
@@ -425,7 +425,7 @@
         font-size: 4rem;
         font-weight: 300;
         color: var(--text-dark);
-        width: 60rem;
+        width: 30rem;
     }
     .layer {
         position: absolute;
@@ -444,7 +444,7 @@
         font-size: 2rem;
         font-weight: 300;
         color: var(--text-light);
-        width: 60rem;
+        width: 30rem;
     }
     .header_content .btn {
         background: transparent;
@@ -472,6 +472,7 @@
         text-align: left;
         font-size: 3rem;
         opacity: 0.4;
+        width: 40rem;
     }
     .why_content p {
         margin-bottom: 2rem;
