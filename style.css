@@ -5,7 +5,7 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    scroll-behavior: none;
+    scroll-behavior:smooth;
     border: none;
     outline: none;
 }
@@ -84,6 +84,7 @@ nav::before {
     gap: 5px;
     transition: all 0.5s ease;
     font-weight: 800;
+    width: 12rem;
 }
 
 .nav_logo:hover {
