@@ -5,7 +5,7 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
     border: none;
     outline: none;
 }
@@ -19,10 +19,11 @@ html {
     font-size: 62.5%;
 }
 
-section {
+section{
     min-height: 100vh;
     padding: 10rem 8% 2rem;
-
+  overflow: hidden;
+ 
 }
 
 :root {
@@ -34,29 +35,28 @@ section {
     --max-width: 120rem;
 }
 
+#menu-cross-bar {
+    display: flex;
+    font-size: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
 
-.fa-bars {
-    font-size: 2.3rem;
-    color: black;
-    cursor: pointer;
+#menu {
     display: none;
 }
 
-
-.fa-times {
-
-    font-size: 2.6rem;
-    color: black;
-    cursor: pointer;
+#cancle {
     display: none;
 }
+
 
 nav {
     padding: 1rem 8% 2rem;
     width: 100%;
     height: 7rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit,minmax(50rem,auto));
     align-items: center;
     justify-content: space-between;
     position: fixed;
@@ -105,11 +105,10 @@ nav::before {
     color: rgb(233, 18, 143);
 }
 
-.nav_links {
+.nav_links{
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin-top: -10rem;
 }
 
 .nav_links a {
@@ -122,15 +121,17 @@ nav::before {
 }
 
 .link a:hover {
-    color: var(--primary-color);
-    border-bottom: 2px solid rgb(233, 18, 143);
+    color: var(--text-dark);
+    border-bottom: 2px solid rgb(247, 12, 207);
     z-index: 1;
 
 }
 
 /* home section code */
+
 section {
     position: relative;
+
 }
 
 .layer {
@@ -214,8 +215,8 @@ section {
 
     font-size: 40px;
     font-weight: 800;
-    animation: vivek 0.8s linear infinite;
-    animation-timing-function: ease;
+    animation: vivek 0.8s infinite;
+    animation-timing-function: ease-in-out;
     animation-play-state: running;
     color: black;
     /* filter: drop-shadow(0 0 10px rgb(32, 30, 31)) drop-shadow(0 0 10px hotpink) drop-shadow(0 0 5px rgba(255, 105, 180, 0.555));  */
@@ -224,13 +225,17 @@ section {
 }
 
 @keyframes vivek {
-    from {
-        transform: translate(0px, 0px);
+    0% {
+        transform: translateY(0px);
 
     }
 
-    to {
-        transform: translate(0px, 10px)
+    50% {
+        transform: translateY(10px)
+    }
+
+    100% {
+        transform: translateY(0px)
     }
 }
 
@@ -240,16 +245,20 @@ section {
 
 .why_container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:repeat(auto-fit,minmax(20rem, auto));
     align-items: center;
-    gap: 3rem;
+   gap: 5rem;
+   
 }
 
-.why_image img {
-    max-width: 60rem;
+.why_class img {
+    max-width:100%;
+    min-height:35vh;
     margin: auto;
 }
-
+.why_content{
+    min-width: 100vw;
+}
 .why_content .section_header {
     margin-bottom: 1rem;
     text-align: left;
@@ -260,8 +269,9 @@ section {
 }
 
 .why_content p {
+    width: 45%;
     margin-bottom: 2rem;
-    line-height: 1.8rem;
+    line-height:2rem;
     font-size: 2rem;
     color: var(--text-light);
 }
@@ -283,6 +293,7 @@ section {
 
 .hero {
     background: var(--extra-light);
+    min-height: 70vh;
 }
 
 .hero_container {
@@ -401,6 +412,7 @@ section {
 
 .membership {
     background-color: var(--extra-light);
+        
 }
 
 .membership_grid {
@@ -475,7 +487,9 @@ section {
 }
 
 /* about section code */
-
+.about{
+    min-height: 70vh;
+}
 .about-container.heading {
     font-size: 3rem;
 }
@@ -546,7 +560,9 @@ section {
 /* classes banner section code */
 
 .banner {
-    padding: 25rem 0;
+    width: 100%;
+    min-height:70vh;
+    margin-top: 5rem; 
     background-image: linear-gradient(to right, var(--primary-color), transparent), url(assets/46-banner.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -577,6 +593,7 @@ section {
 
 .posts {
     background: var(--extra-light);
+    min-height: 70vh;
 }
 
 .posts_grid {
@@ -644,7 +661,7 @@ section {
 .photos_grid {
     margin-top: 4rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, auto));
     gap: 3rem;
 }
 

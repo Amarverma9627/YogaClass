@@ -1,41 +1,44 @@
-function show(){
-    let nav=document.getElementById('menu');
-    nav.setAttribute('class','hide');
-
-    let cros=document.getElementById('cancel');
-    cros.setAttribute('class','show');
-
-    let tog=document.getElementById('opt')
-    let res= tog.getAttribute('class')
+function show() {
+    let showBar=document.getElementById('menu-bar')
+    showBar.setAttribute('class','hide')
+    let hideBar=document.getElementById('cross-bar')
+    hideBar.setAttribute('class','show')
+    
+    let list=document.getElementById('opt')
+    let res=list.getAttribute('class');
     if(res=='hide'){
-        tog.setAttribute('class','show')
+         list.setAttribute('class','show')
     }
-   
-}
-
-function hide(){
-    let cross=document.getElementById('cancel')
-    cross.setAttribute('class','hide');
-
-    let nav=document.getElementById('menu');
-    nav.setAttribute('class','show');
-
-    let tog=document.getElementById('opt')
-    let res= tog.getAttribute('class')
-    if(res=='show'){
-        tog.setAttribute('class','hide')
-    }
+ }
+ 
+ function hide(){
+     let showBar=document.getElementById('menu-bar')
+     showBar.setAttribute('class','show')
+     let hideBar=document.getElementById('cross-bar')
+     hideBar.setAttribute('class','hide')
+ 
+     let list=document.getElementById('opt')
+     let res=list.getAttribute('class');
+     if(res=='show')
+          list.setAttribute('class','hide')
+  
+ }
+ 
+ 
+ window.onscroll=()=>{
+     //when will scrollbar down then navbar will hide
+     let tog=document.getElementById('opt')
+     tog.setAttribute('class','hide');
     
-}
+    //and then menu-icon will shown in front
+     let nav=document.getElementById('menu-bar');
+     nav.setAttribute('class','show');
+ 
+     //and cross icon will hide but menu icon are shown in front
+     let cross=document.getElementById('cross-bar')
+     cross.setAttribute('class','hide');
+     
+ }
 
-window.onscroll=()=>{
-
-    let tog=document.getElementById('opt')
-    tog.setAttribute('class','hide');
-    
-    let nav=document.getElementById('menu');
-    nav.setAttribute('class','show');
-
-    let cross=document.getElementById('cancel')
-    cross.setAttribute('class','hide');
-}
+ 
+ 
